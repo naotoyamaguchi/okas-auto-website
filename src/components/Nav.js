@@ -11,6 +11,7 @@ class Nav extends Component {
           <li><Link to="/test">Goes to components/TestComponent.js</Link></li>
           <li><Link to="/contact">Contact / Goes to components/Contact.js</Link></li>
           <li><Link to="/faq">FAQ / Goes to components/Faq.js</Link></li>
+          <li><Link to="/community">Community / Goes to components/Community.js</Link></li>
         </ul>
       </div>
     );

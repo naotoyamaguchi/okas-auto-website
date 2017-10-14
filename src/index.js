@@ -12,6 +12,7 @@ import TestComponent from './components/TestComponent';
 import Contact from './components/Contact';
 import Appointment from './components/Appointment';
 import Faq from './components/Faq';
+import Community from './components/Community';
 // import browserHistory from 'react-router';
 import {
   BrowserRouter,
@@ -37,6 +38,7 @@ ReactDOM.render(
 				<Route exact path="/contact" component={Contact} />
 				<Route exact path="/appointment" component={Appointment} />
 				<Route exact path="/faq" component={Faq} />
+				<Route exact path="/community" component={Community} />
 				<Footer />
 			</div>
 
