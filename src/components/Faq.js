@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../App.css';
 // import { Link } from 'react-router-dom';
 
 class Faq extends Component {
@@ -8,7 +7,7 @@ class Faq extends Component {
     return (
       <div className="App" style={{background: "beige"}}>
         <div className="faq">
-          <a class="faq-question-link" href="#question-10">Question 10</a>
+          <a className="faq-question-link" href="#question-10">Question 10</a>
           <h1>Frequently Asked Questions</h1>
           <ul>
             <ul>

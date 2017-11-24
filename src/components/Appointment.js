@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../App.css';
 
 class Appointment extends Component {
 
@@ -13,13 +12,12 @@ class Appointment extends Component {
   render() {
     return (
       <div className="App" style={{background: "beige"}}>
-        <div className="appointment">
-          <h1>Easily book an appointment with us here!</h1>
-          <p>Quick steps to booking an appointment with us! We do appointments via phone as well!</p>
-        </div>
-        <div className="calendly-inline-widget" data-url="https://calendly.com/naotoy/30min" style={{"minWidth":"320px" , "height":"580px"}}>
-        </div>
-        
+          <div className="appointment">
+            <h1>Easily book an appointment with us here!</h1>
+            <p>Quick steps to booking an appointment with us! We do appointments via phone as well!</p>
+          </div>
+          <div className="calendly-inline-widget" data-url="https://calendly.com/naotoy/30min" style={{"minWidth":"320px" , "height":"580px"}}>
+          </div>
       </div>
     );
   }

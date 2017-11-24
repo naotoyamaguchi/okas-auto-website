@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import ReduxThunk from 'redux-thunk';
 import reducerFunctionName from './reducers';
-import './index.css';
+import './App.css';
 import App from './components/App';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
