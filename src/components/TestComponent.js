@@ -1,20 +1,36 @@
-import React, { Component } from 'react';
-import logo from '../logo.svg';
+import React, { Component } from "react";
+import ReactDOM from 'react-dom';
+
 
 class TestComponent extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to the Test Component!</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+
+  componentDidMount() {
+    var elem = ReactDOM.findDOMNode(this);
+    elem.style.opacity = 0;
+    window.requestAnimationFrame(function() {
+      elem.style.transition = "1s ease";
+      elem.style.opacity = 1;
+    });
   }
+
+  componentWillUnmount(){
+    var elem = ReactDOM.findDOMNode(this);
+    elem.style.opacity = 1;
+    window.requestAnimationFrame(function() {
+      elem.style.transition = "1s ease";
+      elem.style.opacity = 0;
+    });
+  }
+
+ render() {
+    return (
+       <div className="page">
+          <h1>TestComponent</h1>
+          <p>Hello from a sub page!</p>
+       </div>
+     )
+   }
+
 }
 
 export default TestComponent;

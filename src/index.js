@@ -6,17 +6,9 @@ import ReduxThunk from 'redux-thunk';
 import reducerFunctionName from './reducers';
 import './App.css';
 import App from './components/App';
-import Nav from './components/Nav';
-import Footer from './components/Footer';
-import TestComponent from './components/TestComponent';
-import Contact from './components/Contact';
-import Appointment from './components/Appointment';
-import Faq from './components/Faq';
-import Community from './components/Community';
-// import browserHistory from 'react-router';
+
 import {
-  BrowserRouter,
-  Route
+  BrowserRouter
 } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -31,17 +23,7 @@ let store = createStore(
 ReactDOM.render(
 	<Provider store={store}>
 		<BrowserRouter>
-			<div className="root-container">
-				<Nav />
-				<Route exact path="/" component={App} />
-				<Route exact path="/test" component={TestComponent} />
-				<Route exact path="/contact" component={Contact} />
-				<Route exact path="/appointment" component={Appointment} />
-				<Route exact path="/faq" component={Faq} />
-				<Route exact path="/community" component={Community} />
-				<Footer />
-			</div>
-
+			<App />
 		</BrowserRouter>
 	</Provider>, 
 	document.getElementById('root')

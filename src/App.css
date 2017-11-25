@@ -54,3 +54,11 @@ li {
   transition: all 1s ease;
   text-decoration: none;
 }
+
+.animated-page-wrapper {
+    position: absolute;
+    top: 62px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
