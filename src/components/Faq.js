@@ -11,7 +11,6 @@ class Faq extends Component {
     window.requestAnimationFrame(function() {
       elem.style.transition = "1s ease";
       elem.style.opacity = 1;
-      elem.style.color = "red";
     });
   }
 
@@ -21,7 +20,6 @@ class Faq extends Component {
     window.requestAnimationFrame(function() {
       elem.style.transition = "1s ease";
       elem.style.opacity = 0;
-      elem.style.color = "black";
     });
   }
 

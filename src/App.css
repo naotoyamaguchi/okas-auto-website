@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  padding-bottom:60px;
 }
 
 body {
@@ -45,6 +46,12 @@ li {
   font-size: large;
 }
 
+.footer {
+  position: relative;
+  border: 2px solid black;
+  bottom: 0;
+}
+
 .Footer-Items {
   display: inline-block;
 }
@@ -74,17 +81,22 @@ li {
 
 .fade-appear-active,
 .fade-enter-active {
-  transition: opacity .3s ease;
+  transition: .5s ease;
   opacity: 1;
 }
 
 .fade-exit {
-  transition: opacity .3s ease;
+  transition: .5s ease;
   opacity: 1;
 }
 
 .fade-exit-active {
   opacity: 0;
+}
+
+.nav {
+  border: 2px solid black;
+  text-align: center;
 }
 
 a.active {

@@ -16,12 +16,11 @@ import Community from './Community';
 const App = ({ location }) => {
 
   const currentKey = location.pathname.split('/')[1] || '/';
-  const timeout = { enter: 300, exit: 500 };
+  const timeout = { enter: 500, exit: 500 };
 
   return (
     <div className="root-container">
       <Nav />
-
       <TransitionGroup component="main" className="page-main">
         <CSSTransition key={currentKey} timeout={timeout} classNames="fade" appear>
           <section className="page-main-inner">
@@ -30,11 +29,10 @@ const App = ({ location }) => {
             <Route exact path="/appointment" component={Appointment} />
             <Route exact path="/faq" component={Faq} />
             <Route exact path="/community" component={Community} />
+            <Footer />
           </section>
         </CSSTransition>
       </TransitionGroup>
-
-      <Footer />
     </div>
   )
 }
