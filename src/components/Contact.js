@@ -1,48 +1,22 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import ReactDOM from 'react-dom';
-
 
 class Contact extends Component {
 
-  componentDidMount() {
-    console.log("Contact mount function 1");
-    // Get the components DOM node
-    var elem = ReactDOM.findDOMNode(this);
-    // Set the opacity of the element to 0
-    elem.style.opacity = 0;
-    window.requestAnimationFrame(function() {
-      // Now set a transition on the opacity
-      console.log("Contact mount function 2");
-      elem.style.transition = "1s ease";
-      // and set the opacity to 1
-      elem.style.opacity = 1;
-    });
-  }
-
-  componentWillUnmount(){
-    console.log("unmounting contact");
-    var elem = ReactDOM.findDOMNode(this);
-    // Set the opacity of the element to 0
-    elem.style.opacity = 1;
-    window.requestAnimationFrame(function() {
-      // Now set a transition on the opacity
-      elem.style.transition = "1s ease";
-      // and set the opacity to 1
-      elem.style.opacity = 0;
-    });
-  }
-
   render() {
     return (
-      <div className="App" style={{background: "beige"}}>
-        <div className="contact">
-          <h1>Let us help you..</h1>
-          <p>About us Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla eveniet placeat esse! Dolorem nemo tempora eos maxime explicabo assumenda voluptas necessitatibus omnis, odit, inventore dignissimos veniam perferendis incidunt, alias quidem!</p>
-          <h3><Link to="/appointment">Book an estimate appointment with us!</Link></h3>
-        </div>
-
-        
+      <div className="contact">
+          <div>
+             <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum alias dolore illo dolorum eum, enim perspiciatis doloribus est recusandae quo quibusdam consequatur hic, quos animi praesentium ipsum rem cumque. Maiores?</span>
+             <span>Atque adipisci pariatur magni, eligendi, eaque in asperiores eius laboriosam iure ipsa nostrum obcaecati autem placeat blanditiis dicta! Ab non harum rem dolor ipsum et necessitatibus! Repudiandae, dolores maiores explicabo!</span>
+             <span>Suscipit illo ratione blanditiis in odio cupiditate repudiandae maxime nostrum tempore eaque odit delectus, sunt nobis, ipsa beatae asperiores unde labore natus praesentium maiores vitae at exercitationem consequuntur deserunt! Omnis!</span>
+             <span>Sint incidunt tempora debitis saepe iusto iure. Veritatis commodi debitis tenetur officia quasi natus vero officiis necessitatibus labore mollitia odit id esse architecto, unde saepe consequatur accusamus modi vel, fugit.</span>
+             <span>Assumenda atque ullam inventore incidunt velit, necessitatibus officia quae, est ut rerum iure doloribus minima aperiam perferendis suscipit minus voluptatem error voluptatibus! Ut omnis ab beatae, facilis illum et, explicabo!</span>
+             <span>Sit neque adipisci quisquam ipsum. Quis quidem sint adipisci numquam accusantium doloremque nulla quasi explicabo ipsam sunt possimus, cum quos voluptate, ipsum sequi, quaerat omnis, laboriosam quia perferendis ducimus aperiam!</span>
+             <span>Libero quod officiis nam ipsa dignissimos tenetur consectetur veniam, quo harum aut eligendi dolorum impedit, officia accusantium voluptatum similique expedita quaerat quidem id. Doloremque laudantium nihil ipsa, repellat possimus asperiores.</span>
+             <span>Omnis, saepe, quis iure vero quia laboriosam temporibus dicta aliquid dolorem. Quaerat incidunt nostrum, eligendi, aliquam saepe distinctio sint placeat iure sit laborum perferendis error ab quisquam repudiandae nihil cupiditate.</span>
+             <span>Minus at ut eius odio quasi, velit, molestiae nostrum alias veniam. Neque vel voluptas fugiat facere est, provident sed optio ratione dolor dolorem eaque, ipsum dolorum soluta eum consectetur laudantium?</span>
+             <span>Vero voluptas iure in odit illo quisquam nobis, maiores adipisci cum deleniti commodi alias eum autem, dolore. Quae eos, consequatur, sunt ea necessitatibus numquam ratione in veniam laboriosam id, impedit!</span></p>
+          </div>
       </div>
     );
   }

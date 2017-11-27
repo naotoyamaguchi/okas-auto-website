@@ -5,10 +5,11 @@ class Footer extends Component {
     return (
       <div className="Footer">
         <ul>
-          <li>Footer Item 1</li>
-          <li>Footer Item 2</li>
-          <li>Footer Item 3</li>
-          <li>Footer Item 4</li>
+          <li className="Footer-Items">Footer Item 1</li>
+          <li className="Footer-Items">Footer Item 2</li>
+          <li className="Footer-Items">Footer Item 3</li>
+          <li className="Footer-Items">Footer Item 4</li>
+          <li className="Footer-Items">Footer Item 5</li>
         </ul>
       </div>
     );

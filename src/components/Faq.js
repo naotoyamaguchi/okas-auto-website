@@ -1,7 +1,29 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
+import ReactDOM from 'react-dom';
+
 
 class Faq extends Component {
+
+  componentDidMount() {
+    var elem = ReactDOM.findDOMNode(this);
+    elem.style.opacity = 0;
+    window.requestAnimationFrame(function() {
+      elem.style.transition = "1s ease";
+      elem.style.opacity = 1;
+      elem.style.color = "red";
+    });
+  }
+
+  componentWillUnmount(){
+    var elem = ReactDOM.findDOMNode(this);
+    elem.style.opacity = 1;
+    window.requestAnimationFrame(function() {
+      elem.style.transition = "1s ease";
+      elem.style.opacity = 0;
+      elem.style.color = "black";
+    });
+  }
 
   render() {
     return (
