@@ -20,10 +20,11 @@ const App = ({ location }) => {
 
   return (
     <div className="root-container">
-      <Nav />
+      
       <TransitionGroup component="main" className="page-main">
         <CSSTransition key={currentKey} timeout={timeout} classNames="fade" appear>
           <section className="page-main-inner">
+            <Nav />
             <Route exact path="/" component={Home} />
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/appointment" component={Appointment} />

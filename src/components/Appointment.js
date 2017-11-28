@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom'; 
 
 class Appointment extends Component {
 
@@ -9,6 +10,24 @@ class Appointment extends Component {
     document.body.appendChild(script1);
   }
 
+  componentDidMount() {
+    var elem = ReactDOM.findDOMNode(this);
+    elem.style.opacity = 0;
+    window.requestAnimationFrame(function() {
+      elem.style.transition = "1s ease";
+      elem.style.opacity = 1;
+    });
+  }
+
+  componentWillUnmount(){
+    var elem = ReactDOM.findDOMNode(this);
+    elem.style.opacity = 1;
+    window.requestAnimationFrame(function() {
+      elem.style.transition = "1s ease";
+      elem.style.opacity = 0;
+    });
+  }
+
   render() {
     return (
       <div className="App" style={{background: "beige"}}>
@@ -16,7 +35,7 @@ class Appointment extends Component {
             <h1>Easily book an appointment with us here!</h1>
             <p>Quick steps to booking an appointment with us! We do appointments via phone as well!</p>
           </div>
-          <div className="calendly-inline-widget" data-url="https://calendly.com/naotoy/30min" style={{"minWidth":"320px" , "height":"580px"}}>
+          <div className="calendly-inline-widget" data-url="https://calendly.com/naotoy/15min" style={{"minWidth":"320px" , "height":"580px"}}>
           </div>
       </div>
     );
