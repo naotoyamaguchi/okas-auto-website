@@ -12,7 +12,6 @@ import Faq from './Faq';
 import Community from './Community';
 
 
-
 const App = ({ location }) => {
 
   const currentKey = location.pathname.split('/')[1] || '/';
