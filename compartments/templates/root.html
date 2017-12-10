@@ -1,0 +1,21 @@
+<div class="content">
+  <h1>{{fields.header}}</h1>
+  <p>{{fields.notes}}</p>
+  <a class="button" href="https://airshipcms.io/documentation/view/quickstart-guide" target="_blank">
+    Hullo
+    <span class="arrow"></span>
+  </a>
+</div>
+
+{{{help}}}
+
+{{fields.new_box}}
+
+<!-- content blocks carry template content & fields data to the layout -->
+{{#content_for 'title'}}
+  {{fields.header}}
+{{/content_for}}
+
+{{#content_for 'color_theme'}}
+  {{fields.color_theme}}
+{{/content_for}}
